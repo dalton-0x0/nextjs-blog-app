@@ -1,16 +1,16 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 
-export default function Home() {
+export default function HomePage() {
     return (
         <div className={styles.container}>
             <Head>
                 <title>Foodie Blog</title>
-                {/* <link rel="icon" href="/favicon.ico" /> */}
+                <link rel="icon" href="/blog.ico" />
             </Head>
 
             <div className={styles.container}>
-                <h1>Hello Next World!</h1>
+                <h1>The Home Page</h1>
             </div>
 
             <footer className={styles.footer}>
