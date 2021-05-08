@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import Link from "next/link";
 
 function HomePage() {
     return (
@@ -11,6 +12,17 @@ function HomePage() {
 
             <div className={styles.container}>
                 <h1>The Home Page</h1>
+                <ul>
+                    <li>
+                        <Link href="/about">About</Link>
+                    </li>
+                    <li>
+                        <Link href="/blog/2020/12">Blog</Link>
+                    </li>
+                    <li>
+                        <Link href="/portfolio">Portfolio</Link>
+                    </li>
+                </ul>
             </div>
 
             <footer className={styles.footer}>
