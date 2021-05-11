@@ -1,44 +1,17 @@
+import { getFeaturedEvents } from "../dummy-data";
+import EventList from "../components/events/event-list";
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
-import Link from "next/link";
 
 function HomePage() {
+    const featuredEvents = getFeaturedEvents();
+
     return (
-        <div className={styles.container}>
+        <div>
             <Head>
-                <title>Foodie Blog</title>
-                <link rel="icon" href="/blog.ico" />
+                <title>Events App</title>
+                <link rel="icon" href="/blog.ico"/>
             </Head>
-
-            <div className={styles.container}>
-                <h1>The Home Page</h1>
-                <ul>
-                    <li>
-                        <Link href="/about">About</Link>
-                    </li>
-                    <li>
-                        <Link href="/blog/2020/12">Blog</Link>
-                    </li>
-                    <li>
-                        <Link href="/portfolio">Portfolio</Link>
-                    </li>
-                </ul>
-            </div>
-
-            <footer className={styles.footer}>
-                <a
-                    href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Powered by{" "}
-                    <img
-                        src="/vercel.svg"
-                        alt="Vercel Logo"
-                        className={styles.logo}
-                    />
-                </a>
-            </footer>
+            <EventList items={featuredEvents} />
         </div>
     );
 }
