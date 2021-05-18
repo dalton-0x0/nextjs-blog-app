@@ -35,7 +35,7 @@ function FilteredEventsPage() {
         <Head>
             <title>Filtered Events</title>
             <meta name="description" content={`list of filtered events`} />
-            <link rel="icon" href="/blog.ico" />
+            {/* <link rel="icon" href="/blog.ico" /> */}
         </Head>
     );
 
@@ -61,7 +61,7 @@ function FilteredEventsPage() {
                 name="description"
                 content={`all events for ${numMonth}/${numYear}`}
             />
-            <link rel="icon" href="/blog.ico" />
+            {/* <link rel="icon" href="/blog.ico" /> */}
         </Head>
     );
 
