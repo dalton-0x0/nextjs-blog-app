@@ -7,8 +7,12 @@ function HomePage(props) {
     return (
         <div>
             <Head>
-                <title>Events App</title>
-                <link rel="icon" href="/blog.ico" />
+                <title>Featured Events</title>
+                <meta
+                    name="description"
+                    content="featured events chosen specially for you"
+                />
+                {/* <link rel="icon" href="/blog.ico" /> */}
             </Head>
             <EventList items={props.events} />
         </div>
@@ -21,7 +25,7 @@ export async function getStaticProps() {
         props: {
             events: featuredEvents,
         },
-        // revalidate: 1800,
+        revalidate: 1800,
     };
 }
 
